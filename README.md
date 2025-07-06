@@ -1,4 +1,7 @@
 .
+# Cấu trúc thư mục
+
+```
 ├── alembic
 │   ├── env.py
 │   ├── README
@@ -54,5 +57,4 @@
     ├── test_auth.py
     ├── test_todos.py
     └── test_users.py
-
-15 directories, 41 files
+```
