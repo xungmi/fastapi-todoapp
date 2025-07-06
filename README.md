@@ -34,27 +34,31 @@
 │   │   ├── todo.py
 │   │   └── user.py
 │   ├── services
+│   │   ├── admin_service.py
 │   │   ├── auth_service.py
 │   │   ├── __init__.py
 │   │   ├── todo_service.py
 │   │   └── user_service.py
 │   └── utils
-├── ARCHITECTURE_ANALYSIS.md
 ├── data
-├── DEPS_EXPLANATION.md
-├── DEPS_USAGE_GUIDE.md
+├── dk_build.sh
+├── dk_run.sh
+├── docker-compose.yml
+├── Dockerfile
 ├── __init__.py
+├── pyproject.toml
+├── README.md
 ├── README_STRUCTUREx.md
+├── requirements.txt
 ├── scripts
+│   ├── format.sh
+│   ├── generate_tests.py
 │   └── kill_port_8000.sh
-└── test
-    ├── example
-    │   ├── __init__.py
-    │   ├── test_api.py
-    │   ├── test_basic_ops.py
-    │   └── test_class.py
-    ├── __init__.py
-    ├── test_auth.py
-    ├── test_todos.py
-    └── test_users.py
+├── t_e_s_t_example
+│   ├── __init__.py
+│   ├── test_api.py
+│   ├── test_basic_ops.py
+│   └── test_class.py
+├── z_kill_port_8000.sh
+└── z_note.txt
 ```
