@@ -1,0 +1,1 @@
+docker run -d --gpus all -it --rm -v $PWD:/app fastapi:v1 /bin/bash
