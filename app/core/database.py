@@ -7,7 +7,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Đường dẫn SQLite
-SQLALCHEMY_DATABASE_URL = os.getenv("SQLALCHEMY_DATABASE_URL")
+# SQLALCHEMY_DATABASE_URL = os.getenv("SQLALCHEMY_DATABASE_URL")
+SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL")
 #                                    username:password@localhost/database_name
 # SQLALCHEMY_DATABASE_URL = "postgresql://xungdb:123@localhost:5432/fastapi_db"
 
