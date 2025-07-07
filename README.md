@@ -1,5 +1,9 @@
 .
 # Guide
+## Setup
+```bash
+pip install -r requirements.txt
+```
 ## Khởi chạy ứng dụng với Uvicorn
 
 ```bash
