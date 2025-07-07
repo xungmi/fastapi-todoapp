@@ -1,4 +1,35 @@
 .
+# Guide
+## Khởi chạy ứng dụng với Uvicorn
+
+```bash
+PYTHONPATH=. uvicorn app.main:app --reload
+```
+
+## Các lệnh thao tác
+```bash
+# Kiểm tra tiến trình chiếm port
+lsof -i :8000
+```
+
+```bash
+# Script kill_port_8000.sh (đảm bảo đã có quyền thực thi)
+chmod +x ./script/kill_port_8000.sh
+./script/kill_port_8000.sh
+```
+
+```bash
+# Tạo sơ đồ thư mục
+sudo snap install tree
+tree -I "__pycache__|*.pyc|*.db" > README_STRUCTURE.md
+```
+
+```bash
+# Định dạng mã nguồn tự động
+chmod +x scripts/format.sh
+./scripts/format.sh
+```
+
 # Cấu trúc thư mục
 
 ```
@@ -48,17 +79,41 @@
 ├── __init__.py
 ├── pyproject.toml
 ├── README.md
-├── README_STRUCTUREx.md
 ├── requirements.txt
 ├── scripts
 │   ├── format.sh
 │   ├── generate_tests.py
 │   └── kill_port_8000.sh
+├── test
+│   ├── api
+│   │   ├── test_deps.py
+│   │   └── v1
+│   │       ├── test_admin.py
+│   │       ├── test_auth.py
+│   │       ├── test_todos.py
+│   │       └── test_users.py
+│   ├── core
+│   │   ├── test_config.py
+│   │   └── test_database.py
+│   ├── models
+│   │   ├── test_todo.py
+│   │   └── test_user.py
+│   ├── schemas
+│   │   ├── test_auth.py
+│   │   ├── test_todo.py
+│   │   └── test_user.py
+│   └── services
+│       ├── test_admin_service.py
+│       ├── test_auth_service.py
+│       ├── test_todo_service.py
+│       └── test_user_service.py
 ├── t_e_s_t_example
 │   ├── __init__.py
 │   ├── test_api.py
 │   ├── test_basic_ops.py
 │   └── test_class.py
-├── z_kill_port_8000.sh
-└── z_note.txt
 ```
+
+# Tài liệu và tiện ích
+- Notion nội bộ: https://www.notion.so/FastAPI-22472b24fd9b80aa9ba2d6f48a3b718f
+- Extension VSCode: Material Icon Theme để dễ phân biệt thư mục / tệp.

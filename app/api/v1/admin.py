@@ -1,12 +1,12 @@
 # chỉ xử lý input/output HTTP.
 from typing import Annotated
 
-from fastapi import APIRouter, Depends, HTTPException, Path, status
+from fastapi import APIRouter, Depends, Path, status
 from sqlalchemy.orm import Session
 
+from app.api.deps import get_current_user
 from app.core.database import get_db
 from app.services import admin_service
-from app.api.deps import get_current_user
 
 router = APIRouter(prefix="/admin", tags=["admin"])
 

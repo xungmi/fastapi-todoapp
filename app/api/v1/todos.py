@@ -1,12 +1,12 @@
 from typing import Annotated
 
-from fastapi import APIRouter, Depends, HTTPException, Path, status
+from fastapi import APIRouter, Depends, Path, status
 from sqlalchemy.orm import Session
 
+from app.api.deps import get_current_user
 from app.core.database import get_db
 from app.schemas.todo import TodoRequest
 from app.services import todo_service
-from app.api.deps import get_current_user
 
 router = APIRouter(prefix="/todos", tags=["todos"])
 
@@ -15,7 +15,7 @@ DBDependency = Annotated[Session, Depends(get_db)]
 
 
 """
-dict : là kiểu dữ liệu trả về mong muốn, 
+dict : là kiểu dữ liệu trả về mong muốn,
        chứa thông tin người dùng hiện tại, được lấy từ token JWT.
 """
 user_dependency = Annotated[dict, Depends(get_current_user)]
