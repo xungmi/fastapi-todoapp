@@ -40,7 +40,6 @@ __pycache__
 # Ignore all .db files globally, except in specific folders
 *.db
 !data/
-data/*.db
 
 *.sqlite
 *.db-journal
