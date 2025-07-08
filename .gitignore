@@ -4,7 +4,7 @@
 *.pyd
 __pycache__
 *.pkl
-*.pyd
+*.pyd 
 *.pyo
 *.pdb
 *.egg-info
@@ -37,7 +37,11 @@ __pycache__
 *.pid
 *.seed
 *.sqlite3
+# Ignore all .db files globally, except in specific folders
 *.db
+!data/
+data/*.db
+
 *.sqlite
 *.db-journal
 *.cache
