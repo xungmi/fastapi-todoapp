@@ -1,13 +1,23 @@
 .
 # Guide
-## Setup
+## Setup theo docker
+```bash
+bash dk_build.sh
+bash dk_run.sh
+```
+## Setup theo cài môi trường local
 ```bash
 pip install -r requirements.txt
 ```
-## Khởi chạy ứng dụng với Uvicorn
 
+## Khởi chạy ứng dụng với Uvicorn
 ```bash
 PYTHONPATH=. uvicorn app.main:app --reload
+```
+
+```bash
+# Khởi chạy với .env truyền theo tham số
+ENV_FILE=./.env PYTHONPATH=. uvicorn app.main:app --reload
 ```
 
 ## Các lệnh thao tác
