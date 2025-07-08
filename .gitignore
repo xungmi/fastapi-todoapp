@@ -37,7 +37,7 @@ __pycache__
 *.pid
 *.seed
 *.sqlite3
-# Ignore all .db files globally, except in specific folders
+
 *.db
 !data/
 
